@@ -1,0 +1,318 @@
+//Bootstrap overrides
+* {
+  --bs-gutter-x: 32px;
+}
+
+// colors
+$primary: #45395B;
+$secondary: #7E5FF1;
+$tertiary: #4FC980;
+$text: #333333;
+$text-light: #727F96;
+$option-background: #F9F8FE;
+$white: #ffffff;
+
+// other
+$box-shadow: 0px 8px 32px rgba(114, 127, 150, 0.32);
+$border-radius: 16px;
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+    // mixins
+@mixin title($background) {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 64px;
+  text-align: center;
+  color: $background;
+  margin-bottom: 24px;
+}
+
+@mixin title-h2($background) {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 46px;
+  text-align: center;
+  color: $background;
+  margin-bottom: 24px;
+}
+
+@mixin margin-auto($mb) {
+  display: block;
+  margin: auto auto $mb;
+}
+
+@mixin button($padding-x, $padding-y, $background-c, $border-r, $font-s, $line-h, $font-c) {
+  padding: $padding-x $padding-y;
+  background-color: $background-c;
+  border-radius: $border-r;
+  font-size: $font-s;
+  line-height: $line-h;
+  color: $font-c;
+  font-weight: 500;
+  border: none;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: $text;
+}
+
+.button-primary {
+  @include button(8px, 22px, $secondary, 29px, 16px, 24px, $white);
+}
+
+// styles
+header {
+  height: 56px;
+}
+
+.intro {
+  padding: 109px 0 0 0;
+  position: relative;
+
+  &:before, &:after {
+    position: absolute;
+    content: "";
+    top: 66px;
+    width: 666px;
+    height: 500px;
+    z-index: -1;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  &:before {
+    left: -375px;
+    background-image: url("../img/backgrounds/bg-left-min.png");
+
+  }
+
+  &:after {
+    top: 78px;
+    width: 658px;
+    right: -382px;
+    background-image: url("../img/backgrounds/bg-right-min.png");
+  }
+
+  h1.title {
+    @include title($primary);
+
+    .highlight {
+      @include title($secondary);
+    }
+  }
+
+  &-text {
+    @include margin-auto(40px);
+    text-align: center;
+  }
+
+  button {
+    @include margin-auto(80px);
+  }
+
+  .ratings {
+    @include margin-auto(80px);
+    display: inline-block;
+
+    &:first-of-type {
+      margin-right: 62px;
+    }
+
+    &-wrapper {
+      text-align: center;
+    }
+  }
+}
+
+.carousel {
+  &-wrapper {
+    max-width: 78vw;
+    margin: auto auto 120px;
+    position: relative;
+    overflow: visible;
+  }
+
+  &-homepage {
+    border-radius: $border-radius - 6;
+    overflow: hidden;
+  }
+
+  .carousel-control {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+
+    &-prev, &-next {
+      background-color: $primary;
+      border-radius: 100%;
+      height: 48px;
+      width: 48px;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      opacity: 1;
+
+      &:hover {
+        background-color: $secondary;
+      }
+    }
+
+    &-prev {
+      left: -90px;
+    }
+
+    &-next {
+      right: -90px;
+    }
+  }
+}
+
+.pricing {
+  padding: 120px 0 112px 0;
+
+  .title-h2 {
+    @include title-h2($primary);
+
+    .highlight {
+      @include title-h2($secondary);
+    }
+  }
+
+  &-text {
+    @include margin-auto(64px);
+    text-align: center
+  }
+
+  .card {
+    padding: 32px;
+    border: none;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+
+    &:hover {
+      background-color: $option-background;
+    }
+
+    &s-row {
+      max-width: 78vw;
+      margin: auto;
+    }
+
+    &-wrapper {
+      margin-bottom: 32px;
+      display: flex;
+    }
+
+    &-icon {
+      margin-bottom: 16px;
+    }
+
+    &-title {
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 4px;
+    }
+
+    &-subtitle, &-price {
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: $text-light;
+      margin-bottom: 24px;
+
+      .highlight {
+        font-family: 'Roboto', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 56px;
+        color: $secondary;
+      }
+    }
+
+    &-price {
+      margin-bottom: 32px;
+    }
+
+    &-description {
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 48px;
+    }
+
+    &-button {
+      margin-top: auto;
+
+      .button-primary {
+        width: 100%;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.offer {
+  padding: 80px 0 0 0;
+
+  &-background {
+    background-image: url("../img/backgrounds/screens.png");
+    background-repeat: no-repeat;
+    background-size: calc(78vw - 32px);
+    background-position: center;
+    background-position-y: 276px;
+  }
+
+  .title {
+    @include title($white);
+    margin-bottom: 8px;
+
+    .highlight {
+      @include title($tertiary);
+      margin-bottom: 8px;
+    }
+  }
+
+  .subtitle {
+    @include title-h2(rgba($white, 0.5));
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 40px;
+  }
+
+  button {
+    @include margin-auto(284px);
+    @include button(18px, 63.5px, $secondary, 50px, 20px, 28px, $white);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.wrap {
+  width: 100%;
+
+  &.pricing {
+    background-color: $option-background;
+  }
+
+  &.offer {
+    background-color: $primary;
+  }
+}
