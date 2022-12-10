@@ -383,7 +383,13 @@ header .links .button-primary img {
   color: #7E5FF1;
 }
 .pricing .card-price {
-  margin-bottom: 32px;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+.pricing .card-price .price-small {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
 }
 .pricing .card-description {
   font-family: "Roboto", sans-serif;
@@ -391,7 +397,8 @@ header .links .button-primary img {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  margin-bottom: 48px;
+  margin-bottom: 24px;
+  flex: 2;
 }
 .pricing .card-button {
   margin-top: auto;
@@ -399,6 +406,77 @@ header .links .button-primary img {
 .pricing .card-button .button-primary {
   width: 100%;
   text-align: left;
+  display: flex;
+}
+.pricing .card-button .button-primary img {
+  margin-left: auto;
+  padding-right: 4px;
+}
+.pricing .card-green {
+  overflow: hidden;
+}
+.pricing .card-green.card-star:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 80px 80px 0;
+  border-color: transparent #4FC980 transparent transparent;
+}
+.pricing .card-green.card-star:before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  width: 20px;
+  height: 18px;
+  background-image: url("../img/icons/Star.svg");
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+.pricing .card-green.card-star .card-highlight {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  background-color: #4FC980;
+  color: #ffffff;
+  width: max-content;
+  padding: 4px 17px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+.pricing .card-green .card-price .highlight {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+}
+.pricing .card-green.card-list .card-price, .pricing .card-green.card-list .card-highlight {
+  margin-left: 17px;
+  display: list-item;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+}
+.pricing .card-green.card-list .card-highlight {
+  color: #4FC980;
+}
+.pricing .card-green.card-list .card-price {
+  color: #7E5FF1;
+}
+.pricing .card-green.card-list .card-price span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #727F96;
+}
+.pricing .card-green button {
+  background-color: #4FC980;
+}
+.pricing .card-green button:hover {
+  background-color: #309c5b;
 }
 
 .offer {
