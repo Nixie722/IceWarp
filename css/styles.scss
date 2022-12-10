@@ -252,6 +252,7 @@ header {
     z-index: -1;
     background-size: 100%;
     background-repeat: no-repeat;
+    transition: all ease .5s;
   }
 
   &:before {
@@ -269,6 +270,10 @@ header {
 
   h1.title {
     @include title($primary);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 632px;
+    padding: 0 16px;
 
     .highlight {
       @include title($secondary);
@@ -278,6 +283,11 @@ header {
   &-text {
     @include margin-auto(40px);
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 632px;
+
+    padding: 0 16px;
   }
 
   button {
@@ -595,8 +605,8 @@ header {
   padding: 80px 0 0 0;
 
   &-background {
-    background: url("../img/backgrounds/screens.png") no-repeat center/calc(78vw - 64px);
-    background-position-y: 276px;
+    background: url("../img/backgrounds/screens.png") no-repeat center/76vw;
+    background-position-y: 375px;
   }
 
   .title {
@@ -617,7 +627,7 @@ header {
   }
 
   button {
-    @include margin-auto(284px);
+    @include margin-auto(27%);
     @include button(18px, 63.5px, $secondary, 50px, 20px, 28px, $white);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
   }
@@ -774,6 +784,24 @@ header {
 
 // responsiv
 
+@media only screen and (min-width: 1367px) {
+  .intro {
+    &:before, &:after {
+      width: 750px;
+      height: 600px;
+      top: 35px;
+    }
+
+    &:before {
+      left: -315px;
+    }
+
+    &:after {
+      right: -315px;
+    }
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   .header {
     .links {
@@ -803,8 +831,48 @@ header {
 
   .intro {
     &:before, &:after {
+      transition: opacity ease .5s;
       opacity: .20;
     }
+
+    h1.title, &-text {
+      max-width: 490px;
+    }
+  }
+  .wrap {
+    &.offer {
+      padding: 80px 0;
+
+      .subtitle {
+        font-size: 22px;
+        line-height: 30px;
+      }
+
+      button {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .carousel .carousel-control-wrapper{
+    &:nth-of-type(1) {
+      left: 33%;
+      top: calc(100% + 45px);
+    }
+    &:nth-of-type(2) {
+      right: 33%;
+      top: calc(100% + 45px);
+    }
+  }
+
+  .pricing .cards-row {
+    max-width: inherit;
+  }
+
+  .carousel-wrapper {
+    max-width: 95vw;
   }
 }
 
@@ -828,5 +896,9 @@ header {
     &:before, &:after {
       display: none;
     }
+  }
+
+  .offer-background {
+    background: none;
   }
 }

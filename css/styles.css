@@ -183,6 +183,7 @@ header .links .button-primary img {
   z-index: -1;
   background-size: 100%;
   background-repeat: no-repeat;
+  transition: all ease 0.5s;
 }
 .intro:before {
   left: -375px;
@@ -201,6 +202,10 @@ header .links .button-primary img {
   text-align: center;
   color: #45395B;
   margin-bottom: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 632px;
+  padding: 0 16px;
 }
 .intro h1.title .highlight {
   font-family: "Roboto", sans-serif;
@@ -214,6 +219,10 @@ header .links .button-primary img {
   display: block;
   margin: auto auto 40px;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 632px;
+  padding: 0 16px;
 }
 .intro button {
   display: block;
@@ -483,8 +492,8 @@ header .links .button-primary img {
   padding: 80px 0 0 0;
 }
 .offer-background {
-  background: url("../img/backgrounds/screens.png") no-repeat center/calc(78vw - 64px);
-  background-position-y: 276px;
+  background: url("../img/backgrounds/screens.png") no-repeat center/76vw;
+  background-position-y: 375px;
 }
 .offer .title {
   font-family: "Roboto", sans-serif;
@@ -517,7 +526,7 @@ header .links .button-primary img {
 }
 .offer button {
   display: block;
-  margin: auto auto 284px;
+  margin: auto auto 27%;
   padding: 18px 63.5px;
   background-color: #7E5FF1;
   border-radius: 50px;
@@ -651,6 +660,19 @@ header .links .button-primary img {
   height: 100vh;
 }
 
+@media only screen and (min-width: 1367px) {
+  .intro:before, .intro:after {
+    width: 750px;
+    height: 600px;
+    top: 35px;
+  }
+  .intro:before {
+    left: -315px;
+  }
+  .intro:after {
+    right: -315px;
+  }
+}
 @media only screen and (max-width: 1200px) {
   .header .links {
     display: none;
@@ -674,7 +696,40 @@ header .links .button-primary img {
   }
 
   .intro:before, .intro:after {
+    transition: opacity ease 0.5s;
     opacity: 0.2;
+  }
+  .intro h1.title, .intro-text {
+    max-width: 490px;
+  }
+
+  .wrap.offer {
+    padding: 80px 0;
+  }
+  .wrap.offer .subtitle {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .wrap.offer button {
+    margin-bottom: 0;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .carousel .carousel-control-wrapper:nth-of-type(1) {
+    left: 33%;
+    top: calc(100% + 45px);
+  }
+  .carousel .carousel-control-wrapper:nth-of-type(2) {
+    right: 33%;
+    top: calc(100% + 45px);
+  }
+
+  .pricing .cards-row {
+    max-width: inherit;
+  }
+
+  .carousel-wrapper {
+    max-width: 95vw;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -691,6 +746,10 @@ header .links .button-primary img {
 
   .intro:before, .intro:after {
     display: none;
+  }
+
+  .offer-background {
+    background: none;
   }
 }
 
