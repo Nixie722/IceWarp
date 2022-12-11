@@ -248,6 +248,7 @@ header .links .button-primary img {
 }
 .carousel-homepage {
   border-radius: 10px;
+  filter: drop-shadow(0px 16px 64px rgba(114, 127, 150, 0.64));
   overflow: hidden;
 }
 .carousel .carousel-control {
@@ -457,6 +458,12 @@ header .links .button-primary img {
   border-radius: 8px;
   margin-bottom: 8px;
 }
+.pricing .card-green.card-star button {
+  background-color: #4FC980;
+}
+.pricing .card-green.card-star button:hover {
+  background-color: #309c5b;
+}
 .pricing .card-green .card-price .highlight {
   font-weight: 500;
   font-size: 24px;
@@ -481,15 +488,14 @@ header .links .button-primary img {
   line-height: 24px;
   color: #727F96;
 }
-.pricing .card-green button {
-  background-color: #4FC980;
-}
-.pricing .card-green button:hover {
-  background-color: #309c5b;
-}
 
 .offer {
   padding: 80px 0 0 0;
+}
+.offer-icon img {
+  display: block;
+  margin: auto auto 16px;
+  display: block;
 }
 .offer-background {
   background: url("../img/backgrounds/screens.png") no-repeat center/76vw;
