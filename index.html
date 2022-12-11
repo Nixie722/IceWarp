@@ -147,7 +147,7 @@
     </div>
     <nav class="menu">
         <ul>
-            <li>Product
+            <li id="menu-product">Product
                 <div class="submenu submenu-product">
                     <div class="container">
                         <div class="row">
@@ -281,7 +281,7 @@
                     </div>
                 </div>
             </li>
-            <li>Pricing
+            <li id="menu-pricing">Pricing
                 <div class="submenu submenu-pricing">
                     <div class="container">
                         <div class="row">
@@ -402,7 +402,7 @@
                     </div>
                 </div>
             </li>
-            <li>Support
+            <li id="menu-support" >Support
                 <div class="submenu submenu-support">
                     <div class="container">
                         <div class="row">
@@ -523,7 +523,7 @@
                     </div>
                 </div>
             </li>
-            <li>Company
+            <li id="menu-company">Company
                 <div class="submenu submenu-company">
                     <div class="container">
                         <div class="row">
@@ -606,13 +606,9 @@
         </ul>
     </nav>
     <div class="links">
-        <a href="" class="login">Login</a>
-        <a href="">
-            <button class="button-primary inverted">Contact Sales</button>
-        </a>
-        <a href="">
-            <button class="button-primary">Get Started<img src="./img/icons/Union.svg" alt=""></button>
-        </a>
+        <a href="" id="link-login" class="login">Login</a>
+        <a href="" id="link-contact-sales"><button id="contact-sales" class="button-primary inverted">Contact Sales</button></a>
+        <a href="" id="link-get-started"><button id="get-started" class="button-primary">Get Started<img src="./img/icons/Union.svg" alt=""></button></a>
     </div>
 </header>
 
@@ -624,7 +620,7 @@
             <p class="intro-text">The best browser solution for your company. Email, TeamChat,
                 Conferences, Documents editing and much more with a full-blown
                 secure cloud.</p>
-            <button class="button-primary center">Discover more</button>
+            <button id="discover-more" class="button-primary center">Discover more</button>
             <div class="ratings-wrapper">
                 <img class="ratings" src="./img/ZDNet.svg" alt="ZDNet">
                 <img class="ratings" src="./img/Gather.svg" alt="Gather">
@@ -685,7 +681,7 @@
                     </div>
                     <div class="card-description">Start small, grow big, use all the features all the time.</div>
                     <div class="card-button">
-                        <button class="button-primary">Show details<img src="./img/icons/Drop%20Option.svg" alt="">
+                        <button id="card-startup-package" class="button-primary">Show details<img src="./img/icons/Drop%20Option.svg" alt="">
                         </button>
                     </div>
                 </div>
@@ -699,7 +695,7 @@
                     <div class="card-price"><span class="highlight">$2.50</span> user / month</div>
                     <div class="card-description">Save a lot, have a lot. All in the browser.</div>
                     <div class="card-button">
-                        <button class="button-primary">Show details<img src="./img/icons/Drop%20Option.svg" alt="">
+                        <button id="card-medium-bussiness" class="button-primary">Show details<img src="./img/icons/Drop%20Option.svg" alt="">
                         </button>
                     </div>
                 </div>
@@ -714,7 +710,7 @@
                     <div class="card-description">All-in-one experience in the browser that scales with your growth.
                     </div>
                     <div class="card-button">
-                        <button class="button-primary">Show details<img src="./img/icons/Drop%20Option.svg" alt="">
+                        <button id="card-enterprise" class="button-primary">Show details<img src="./img/icons/Drop%20Option.svg" alt="">
                         </button>
                     </div>
                 </div>
@@ -732,7 +728,7 @@
                     <div class="card-description">All-in-one experience in the browser that scales with your needs.
                     </div>
                     <div class="card-button">
-                        <button class="button-primary">Show details<img src="./img/icons/Drop%20Option.svg" alt="">
+                        <button id="card-education" class="button-primary">Show details<img src="./img/icons/Drop%20Option.svg" alt="">
                         </button>
                     </div>
                 </div>
@@ -746,7 +742,7 @@
                     <div class="card-price"><span class="highlight price-small">Price on request</span></div>
                     <div class="card-description">Full data control, all in one app</div>
                     <div class="card-button">
-                        <button class="button-primary">Show details<img src="./img/icons/Drop%20Option.svg" alt="">
+                        <button id="card-public" class="button-primary">Show details<img src="./img/icons/Drop%20Option.svg" alt="">
                         </button>
                     </div>
                 </div>
@@ -760,7 +756,7 @@
                     <div class="card-price"><span class="highlight">$0.70</span> user per month</div>
                     <div class="card-description">Build your brand on our mature solution. White-label IceWarp!</div>
                     <div class="card-button">
-                        <button class="button-primary">Show details<img src="./img/icons/Drop%20Option.svg" alt="">
+                        <button id="card-isp-hosting" class="button-primary">Show details<img src="./img/icons/Drop%20Option.svg" alt="">
                         </button>
                     </div>
                 </div>
@@ -782,7 +778,7 @@
                 <p class="subtitle">
                     With our Startup Package
                 </p>
-                <button class="btn-secondary center">Jump in</button>
+                <button id="jump-in" class="btn-secondary center">Jump in</button>
             </div>
         </div>
     </div>
@@ -792,5 +788,4 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
 </body>
-
 </html>
